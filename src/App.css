@@ -2,37 +2,137 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+h1 {
+  background: linear-gradient(to right, orange, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  justify-content: center;
+  align-items: center;
+  spacing: 2em;
+}
+
+h1 img {
+  height: 1em;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.layout-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: black;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 100%;
+}
+
+.pokemon-input {
+  background-color: rgb(40, 40, 40);
   color: white;
+  border: 0;
+  border-radius: 2em;
+  padding: 1em;
+  width: 50%;
+  max-width: 400px;
+  min-width: 200px;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.types-container {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.type-button {
+  text-transform: capitalize;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  min-width: 60px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.type-button.selected {
+  border: 2px solid white;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1em;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1em;
+  box-sizing: border-box;
+  justify-items: center;
+}
+
+.pokemon-box {
+  color: white;
+  border-radius: 1em;
+  padding: 1em;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05); /* lekko przezroczysty dla kontrastu */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-box:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 165, 0, 0.5);
+}
+
+.pokemon-box img {
+  width: 6em;
+  height: 6em;
+}
+
+.pokemon-box h2 {
+  margin: 0.5em 0;
+  text-transform: capitalize;
+}
+
+.pokemon-types {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pokemon-type {
+  text-transform: capitalize;
+  display: inline-block;
+  color: white;
+  border: none;
+  border-radius: 2em;
+  padding: 0.3em 0.8em;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.pokemon-modal .MuiPaper-root {
+  border-radius: 1em; /* Zaokrąglone rogi jak kafelek */
+  color: white;
+  text-align: center;
+  padding: 1em;
 }
