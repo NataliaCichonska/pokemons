@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/pokemons">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
